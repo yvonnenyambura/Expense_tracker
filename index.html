@@ -18,15 +18,17 @@
 
  
   <div id="entryForm" style="margin:15px 0; display:flex; gap:10px; flex-wrap:wrap; justify-content: center;">
-    <input type="text" id="foodInput" placeholder="Enter food name" required />
+    <input type="text" id="foodInput" placeholder="Enter food name" style="height: 35px;" required />
     
     <select id="mealType" required>
+      <option>Select meal</option>
       <option value="Breakfast">Breakfast</option>
       <option value="Lunch">Lunch</option>
       <option value="Dinner">Dinner</option>
     </select>
     
     <select id="dayOfWeek" required>
+      <option>Select Day</option>
       <option>Monday</option>
       <option>Tuesday</option>
       <option>Wednesday</option>
@@ -36,7 +38,7 @@
       <option>Sunday</option>
     </select>
     
-    <button id="addEntryBtn">Add Entry</button>
+    <button id="addEntryBtn" style="background-color: black; color: white;">Add Entry</button>
     <button id="clearAllBtn" style="background:#d9534f; color:white;">Clear All</button>
   </div>
 
@@ -46,7 +48,7 @@
       <tr>
         <th>Day</th>
 
-        
+
         <th>Food</th>
         <th>
           Meal
