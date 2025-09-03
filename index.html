@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+  <h1 style="font-style: oblique; font-weight: 800; text-align: center; color: palegoldenrod;">My Calorie Tracker</h1>
+
+
+  <div id="date-section"></div>
+
+ 
+  <canvas id="myChart" width="200" height="50"></canvas> 
+
+ 
+  <div id="entryForm" style="margin:15px 0; display:flex; gap:10px; flex-wrap:wrap; justify-content: center;">
+    <input type="text" id="foodInput" placeholder="Enter food name" required />
+    
+    <select id="mealType" required>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+    
+    <select id="dayOfWeek" required>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select>
+    
+    <button id="addEntryBtn">Add Entry</button>
+    <button id="clearAllBtn" style="background:#d9534f; color:white;">Clear All</button>
+  </div>
+
+ 
+  <table id="foodTable" border-radius="1" cellspacing="0" cellpadding="5" style="width:100%; text-align:center; color: white;">
+    <thead>
+      <tr>
+        <th>Day</th>
+
+        
+        <th>Food</th>
+        <th>
+          Meal
+          <div id="mealFilters" style="display:flex; gap:5px; margin-top:5px; justify-content:center;">
+            <button class="meal-btn active" data-meal="All">All</button>
+            <button class="meal-btn" data-meal="Breakfast">Breakfast</button>
+            <button class="meal-btn" data-meal="Lunch">Lunch</button>
+            <button class="meal-btn" data-meal="Dinner">Dinner</button>
+          </div>
+        </th>
+        <th>Total Calories</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="foodList"></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
